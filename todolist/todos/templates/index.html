@@ -10,10 +10,13 @@
   </head>
   <body>
     <div class="container">
-        <h1>Hello, world!</h1>
+        <header>
+            <h1>TodoList</h1>
+            <hr>
+        </header>
         <ul>
             {% for todo in todos %}
-                <li>{{todo.title}}: {{todo.text}}</li>
+                <li><a href="/todos/details/{{todo.id}}"> {{todo.title}}</a>: {{todo.text}}</li>
             {% endfor %}
         </ul>
     </div>
